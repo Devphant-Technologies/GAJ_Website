@@ -1,95 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 20% 99%;
+    --foreground: 220 30% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 30% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 30% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 220 38% 19%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 33% 97%;
+    --secondary-foreground: 220 30% 18%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 14% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 178 37% 48%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 20% 92%;
+    --input: 214 20% 92%;
+    --ring: 178 37% 48%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    --navy: 220 38% 19%;
+    --teal: 178 37% 48%;
+    --light-grey: 216 33% 97%;
+
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --shadow-soft: 0 2px 16px -2px hsl(220 38% 19% / 0.06);
+    --shadow-card: 0 4px 24px -4px hsl(220 38% 19% / 0.08);
+    --shadow-card-hover: 0 8px 32px -4px hsl(178 37% 48% / 0.15);
+    --shadow-navbar: 0 1px 12px -2px hsl(220 38% 19% / 0.08);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -98,8 +63,92 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
-  body {
-    @apply bg-background text-foreground;
+  html {
+    scroll-behavior: smooth;
   }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-accent text-accent-foreground font-semibold text-sm tracking-wide transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
+    box-shadow: 0 4px 14px -3px hsl(var(--teal) / 0.4);
+  }
+  .btn-primary:hover {
+    box-shadow: 0 6px 20px -3px hsl(var(--teal) / 0.5);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-7 py-3.5 rounded-xl border-2 border-primary/20 text-primary font-semibold text-sm tracking-wide transition-all duration-300 hover:border-accent hover:text-accent hover:scale-[1.02] active:scale-[0.98] bg-transparent;
+  }
+
+  .card-industrial {
+    @apply bg-card rounded-2xl border border-border/60 transition-all duration-400;
+    box-shadow: var(--shadow-card);
+  }
+  .card-industrial:hover {
+    box-shadow: var(--shadow-card-hover);
+    @apply border-accent/30 -translate-y-1;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--navy)), hsl(var(--teal)));
+  }
+
+  .scroll-progress {
+    @apply fixed top-0 left-0 h-[3px] z-[100];
+    background: linear-gradient(90deg, hsl(var(--teal)), hsl(var(--navy)));
+  }
+}
+
+/* Custom cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid hsl(var(--teal));
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+.custom-cursor.expanded {
+  width: 40px;
+  height: 40px;
+  border-color: hsl(var(--navy));
+}
+
+/* Blueprint pattern */
+.blueprint-bg {
+  background-image: 
+    linear-gradient(hsl(var(--teal) / 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--teal) / 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--light-grey));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--teal) / 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--teal) / 0.5);
 }
