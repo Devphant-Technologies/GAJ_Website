@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import heroVideo from "@/assets/hero-video.mp4.asset.json";
 
 const HeroSection = () => {
   return (
@@ -11,10 +12,9 @@ const HeroSection = () => {
           muted
           playsInline
           className="w-full h-full object-cover"
-          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect fill='%231E2A44' width='1920' height='1080'/%3E%3C/svg%3E"
         >
           <source
-            src="https://videos.pexels.com/video-files/3191584/3191584-uhd_2560_1440_25fps.mp4"
+            src={heroVideo.url}
             type="video/mp4"
           />
         </video>
