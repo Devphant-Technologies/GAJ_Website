@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
-import bgImg from "@/assets/bg.png";
+import bgImg from "@/assets/bg.jpg";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const projectImages = Array.from({ length: 10 }).map((_, idx) => {

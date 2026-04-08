@@ -8,7 +8,7 @@ import AboutSection from "@/components/AboutSection";
 import ProductsSection from "@/components/ProductsSection";
 import ClientsSection from "@/components/ClientsSection";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import bgImg from "@/assets/bg.png";
+import bgImg from "@/assets/bg.jpg";
 
 const facilities = Array.from({ length: 9 }).map((_, idx) => {
   const n = String(idx + 1).padStart(2, "0");

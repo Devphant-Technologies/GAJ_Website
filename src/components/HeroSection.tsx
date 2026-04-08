@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const heroBgs = ["/hero/hero-bg.jpg", "/hero/hero-bg2.png", "/hero/hero-bg3.png"];
+const heroBgs = ["/hero/hero-bg.jpg", "/hero/hero-bg2.jpg", "/hero/hero-bg3.jpg"];
 
 const HeroSection = () => {
   const [current, setCurrent] = useState(0);
