@@ -1,13 +1,33 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { motion } from "framer-motion";
 
-const clientLogos = Array.from({ length: 18 }).map((_, idx) => {
-  const n = String(idx + 1).padStart(2, "0");
-  return {
-    src: `/clients/client-${n}.png`,
-    alt: `Client logo ${idx + 1}`,
-  };
-});
+// client-17 removed (duplicate Pragati Glass) — 17 logos total using client-01 to client-18 skipping client-17
+const clientLogos = [
+  ...Array.from({ length: 16 }, (_, i) => i + 1).filter(n => n !== 17),
+  18,
+].map((n) => ({
+  src: `/clients/client-${String(n).padStart(2, "0")}.png`,
+  alt: `Client logo ${n}`,
+}));
+
+// Split into rows: 6, 6, 5
+const row1 = clientLogos.slice(0, 6);
+const row2 = clientLogos.slice(6, 12);
+const row3 = clientLogos.slice(12, 17);
+
+const LogoCard = ({ logo }: { logo: { src: string; alt: string } }) => (
+  <div
+    className="h-20 sm:h-24 rounded-xl bg-card border border-border/50 flex items-center justify-center px-4 overflow-hidden"
+    style={{ boxShadow: "var(--shadow-soft)" }}
+  >
+    <img
+      src={logo.src}
+      alt={logo.alt}
+      loading="lazy"
+      className="max-h-14 sm:max-h-16 w-auto object-contain transition-transform duration-300 ease-out hover:scale-110"
+    />
+  </div>
+);
 
 const ClientsSection = () => {
   const { ref, isInView } = useScrollReveal();
@@ -29,22 +49,26 @@ const ClientsSection = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6"
+          className="flex flex-col gap-4 sm:gap-6"
         >
-          {clientLogos.map((logo) => (
-            <div
-              key={logo.src}
-              className="h-16 sm:h-18 lg:h-20 rounded-xl bg-card border border-border/50 flex items-center justify-center px-4 overflow-hidden"
-              style={{ boxShadow: "var(--shadow-soft)" }}
-            >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                loading="lazy"
-                className="max-h-10 sm:max-h-11 lg:max-h-12 w-auto object-contain transition-transform duration-300 ease-out hover:scale-110"
-              />
-            </div>
-          ))}
+          {/* Row 1 — 6 logos */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+            {row1.map((logo) => <LogoCard key={logo.src} logo={logo} />)}
+          </div>
+
+          {/* Row 2 — 6 logos */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+            {row2.map((logo) => <LogoCard key={logo.src} logo={logo} />)}
+          </div>
+
+          {/* Row 3 — 5 logos, centered */}
+          <div className="flex justify-center gap-4 sm:gap-6 flex-wrap">
+            {row3.map((logo) => (
+              <div key={logo.src} className="w-[calc(50%-8px)] sm:w-[calc(33.333%-12px)] lg:w-[calc(16.666%-20px)]">
+                <LogoCard logo={logo} />
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

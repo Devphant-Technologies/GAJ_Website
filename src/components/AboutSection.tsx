@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useEffect, useState, useRef } from "react";
+import AnimatedBackground from "@/components/AnimatedBackground";
 import factoryImg from "@/assets/factory-about.jpg";
 
 const stats = [
-  { value: 40, suffix: "+", label: "Years Experience" },
-  { value: 500, suffix: "+", label: "Projects Completed" },
+  { value: 40, suffix: "+", label: "Years of Experience" },
+  { value: 1000, suffix: "+", label: "Projects Completed" },
   { value: 120, suffix: "+", label: "Happy Clients" },
   { value: 50, suffix: "+", label: "Expert Engineers" },
 ];
@@ -46,8 +47,9 @@ const AboutSection = () => {
   const { ref, isInView } = useScrollReveal();
 
   return (
-    <section id="about" aria-label="About GAJ Manufacturing Works" className="py-24 lg:py-32">
-      <div className="section-container" ref={ref}>
+    <section id="about" aria-label="About GAJ Manufacturing Works" className="relative py-24 lg:py-32 overflow-hidden">
+      <AnimatedBackground />
+      <div className="section-container relative z-10" ref={ref}>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
           <motion.div
@@ -81,10 +83,10 @@ const AboutSection = () => {
               GAJ Manufacturing Works
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              Since 1980, GAJ Manufacturing Works has been at the forefront of Chemical, Dyes, and Pharmaceutical process equipment manufacturing. We design and manufacture a comprehensive range of industrial equipment compliant with ASME Section VIII Division 1  combining decades of heritage with modern innovation.
+              <strong className="text-foreground">Since 1980, GAJ Manufacturing Works</strong> has been at the forefront of Chemical, Dyes, and Pharmaceutical process equipment manufacturing. We design and manufacture a comprehensive range of industrial equipment compliant with ASME Section VIII Division 1 combining decades of heritage with modern innovation.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              We specialise in Reactor Vessels, Storage Tanks, Heat Exchangers, Filter Presses, Pressure Vessels, Blenders, and Columns  fabricated in Stainless Steel and Mild Steel to customer specifications.
+              We specialise in Reactor Vessels, Storage Tanks, Heat Exchangers, Filter Presses, Pressure Vessels, Blenders, and Columns fabricated in Stainless Steel and Mild Steel to customer specifications.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-10">
               GAJ Manufacturing Works is certified to <strong className="text-foreground">ISO 9001:2015</strong> and registered under <strong className="text-foreground">MSME</strong>, reflecting our commitment to quality management, continual improvement, and customer satisfaction.

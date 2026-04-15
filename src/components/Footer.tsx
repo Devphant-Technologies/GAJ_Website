@@ -27,7 +27,7 @@ const Footer = () => {
               { label: "Home", href: "/" },
               { label: "Services", href: "/#services" },
               { label: "About Us", href: "/about" },
-              { label: "Projects", href: "/projects" },
+              { label: "Our Machineries", href: "/projects" },
               { label: "Contact", href: "/contact" },
             ].map(({ label, href }) => (
               <a key={label} href={href}
@@ -40,9 +40,24 @@ const Footer = () => {
           {/* Contact */}
           <address className="not-italic flex flex-col gap-3">
             <h4 className="font-heading font-bold text-foreground mb-1">Contact</h4>
-            <a href="tel:+919429555097" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-accent transition-colors">
+
+            {/* Director */}
+            <div className="flex flex-col gap-1 pb-3 border-b border-border/40">
+              <p className="text-xs font-semibold text-accent tracking-wide">Mr. Suresh Lad — Director</p>
+              <a href="tel:+919429555097" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-accent transition-colors">
+                <Phone className="w-3.5 h-3.5 text-accent flex-shrink-0" aria-hidden="true" />
+                +91 94295 55097
+              </a>
+              <a href="tel:+918487067937" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-accent transition-colors">
+                <Phone className="w-3.5 h-3.5 text-accent flex-shrink-0" aria-hidden="true" />
+                +91 84870 67937
+              </a>
+            </div>
+
+            {/* General */}
+            <a href="tel:+918469474903" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-accent transition-colors">
               <Phone className="w-3.5 h-3.5 text-accent flex-shrink-0" aria-hidden="true" />
-              +91 94295 55097
+              +91 84694 74903
             </a>
             <a href="mailto:gajworks@gmail.com" className="flex items-center gap-2 text-muted-foreground text-sm hover:text-accent transition-colors">
               <Mail className="w-3.5 h-3.5 text-accent flex-shrink-0" aria-hidden="true" />

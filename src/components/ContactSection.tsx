@@ -5,8 +5,9 @@ import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
-  { icon: Phone, label: "Phone", text: "+91 94295 55097 | +91 84870 67937", href: "tel:+919429555097" },
-  { icon: Phone, label: "Phone 2", text: "+91 84694 74903", href: "tel:+918469474903" },
+  { icon: Phone, label: "Phone 1", text: "+91 94295 55097", href: "tel:+919429555097" },
+  { icon: Phone, label: "Phone 2", text: "+91 84870 67937", href: "tel:+918487067937" },
+  { icon: Phone, label: "Phone 3", text: "+91 84694 74903", href: "tel:+918469474903" },
   { icon: Mail, label: "Email", text: "gajworks@gmail.com", href: "mailto:gajworks@gmail.com" },
   {
     icon: MapPin,
@@ -128,7 +129,7 @@ const ContactSection = () => {
             style={{ boxShadow: "var(--shadow-card)" }}
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.3!2d73.0!3d21.63!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395f84b0b0b0b0b1%3A0x0!2sGIDC+Ankleshwar%2C+Gujarat+393002!5e0!3m2!1sen!2sin!4v1"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59349.11342263423!2d72.94200834863281!3d21.612466800000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be023425e44cec1%3A0x825dd26e49a79a81!2sGaj%20Manufacturing%20works!5e0!3m2!1sen!2sin!4v1776272049051!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: 500 }}

@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "919429555097"; // +91 94295 55097
+const WHATSAPP_NUMBER = "918469474903"; // +91 84694 74903
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "Hello GAJ Manufacturing Works,\n\nI'm interested in your products/services and would like to get more details.\n\nPlease share information about:\n- Process Equipment (Reactor Vessels, Heat Exchangers, Storage Tanks, etc.)\n- Industrial Maintenance Services\n- Pricing & Lead Time\n\nThank you."
 );

@@ -20,7 +20,7 @@ export default function Projects() {
         <div className="relative z-10 section-container text-center py-24">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}>
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white text-xs font-semibold tracking-widest uppercase mb-6">
-              Our Products
+              Our Machineries
             </span>
           </motion.div>
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut", delay: 0.25 }}
@@ -32,11 +32,6 @@ export default function Projects() {
             className="text-white/85 text-base sm:text-lg max-w-2xl mx-auto">
             Precision process equipment and shop-floor machinery powering Chemical, Dyes, and Pharmaceutical industries.
           </motion.p>
-          <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut", delay: 0.55 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/#contact" className="btn-primary">Request a Quote</a>
-            <a href="/#services" className="btn-outline text-white border-white hover:bg-white hover:text-black">Explore Services</a>
-          </motion.div>
         </div>
       </section>
 
@@ -45,8 +40,8 @@ export default function Projects() {
         <div className="section-container">
           <div className="mb-10">
             <span className="text-accent text-xs font-semibold tracking-widest uppercase">Shop Floor</span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mt-3">Our Products</h2>
-            <p className="text-muted-foreground mt-3 max-w-2xl">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-foreground mt-3">Our Machineries</h2>
+            <p className="text-muted-foreground mt-3 max-w-2xl whitespace-nowrap overflow-hidden text-ellipsis">
               State-of-the-art equipment that powers our manufacturing capability. Click on any product to learn more.
             </p>
           </div>

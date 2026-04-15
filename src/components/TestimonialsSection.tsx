@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { Quote } from "lucide-react";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 const testimonials = [
   {
@@ -14,7 +15,7 @@ const testimonials = [
     role: "Operations Director, TechFab Ltd",
   },
   {
-    text: "We've partnered with GAJ for over a decade. Their consistency in quality and reliability is unmatched in the industry.",
+    text: "Exceptional engineering and flawless execution. Their precision and dedication to delivering high-quality results truly set them apart.",
     author: "Amit Patel",
     role: "VP Manufacturing, SteelWorks Inc",
   },
@@ -24,8 +25,9 @@ const TestimonialsSection = () => {
   const { ref, isInView } = useScrollReveal();
 
   return (
-    <section id="testimonials" className="py-24 lg:py-32">
-      <div className="section-container" ref={ref}>
+    <section id="testimonials" className="relative py-24 lg:py-32 overflow-hidden">
+      <AnimatedBackground />
+      <div className="section-container relative z-10" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

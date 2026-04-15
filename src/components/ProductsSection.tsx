@@ -4,12 +4,15 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const projects = [
-  { img: "/projects/project-01.png", title: "Shell & Tube Assembly", cat: "Heat Exchanger" },
-  { img: "/projects/project-02.png", title: "Twin Shaft Mixer", cat: "Material Handling" },
+  { img: "/projects/project-02.png", title: "Shell & Tube Assembly", cat: "Heat Exchanger" },
+  { img: "/projects/project-01.png", title: "Twin Shaft Mixer", cat: "Material Handling" },
   { img: "/projects/project-03.png", title: "Large Storage Vessel", cat: "Process Equipment" },
   { img: "/projects/project-04.png", title: "Industrial Tanks", cat: "Fabrication" },
   { img: "/projects/project-05.png", title: "Tube Bundle Bank", cat: "Thermal Systems" },
   { img: "/projects/project-06.png", title: "Filter Press System", cat: "Solid-Liquid Separation" },
+  { img: "/projects/Calendria Columi.jpeg", title: "Calendria Column", cat: "Process Equipment" },
+  { img: "/projects/Conical Crystalliser.jpeg", title: "Conical Crystalliser", cat: "Crystallisation" },
+  { img: "/projects/Filter Press.jpeg", title: "Filter Press", cat: "Solid-Liquid Separation" },
 ];
 
 const ProductsSection = () => {

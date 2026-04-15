@@ -70,11 +70,6 @@ export default function FacilityDetail() {
                     </div>
                   ))}
                 </div>
-
-                <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                  <a href="/#contact" className="btn-primary">Request a Quote</a>
-                  <Link to="/projects" className="btn-outline">View All Products</Link>
-                </div>
               </div>
             </div>
           </motion.div>
