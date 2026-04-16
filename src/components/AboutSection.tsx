@@ -83,7 +83,7 @@ const AboutSection = () => {
               GAJ Manufacturing Works
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              <strong className="text-foreground">Since 1980, GAJ Manufacturing Works</strong> stands as a symbol of precision engineering and excellence in process equipment manufacturing for the chemical, dyes, and pharmaceutical industries. With over four decades of expertise, we blend legacy craftsmanship with advanced engineering to deliver solutions that meet global standards.
+              <strong className="text-foreground">Since 1980, GAJ Manufacturing Works</strong> stands as a symbol of precision engineering and excellence in process equipment manufacturing for the chemical, dyes and pharmaceutical industries. With over four decades of expertise, we blend legacy craftsmanship with advanced engineering to deliver solutions that meet global standards.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Our capabilities include the design, engineering, and fabrication of industrial equipment in compliance with ASME Section VIII Division 1. Our portfolio features reactor vessels, storage tanks, heat exchangers, filter presses, pressure vessels, blenders, and process columns — manufactured using high-grade stainless steel and mild steel to precise client specifications.
